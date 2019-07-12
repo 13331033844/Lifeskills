@@ -1,0 +1,6 @@
+生活小技巧：
+select u.id uid,uc.* from (select id from hd_user limit 20,10) as u 
+left join hd_user_case as uc on uc.userId=u.id
+
+原来列表一对多查询，要循环整个列表，然后去循环查库，
+现在改为外连接查库。一次查完。php处理。
